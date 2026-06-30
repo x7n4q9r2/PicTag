@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: #f5f5f7;
+  color: #222;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  z-index: 100;
+}
+
+header h2 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+}
+
+#search {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.topBar {
+  display: flex;
+  gap: 10px;
+}
+
+.topBar select {
+  flex: 1;
+}
+
+.topBar button {
+  white-space: nowrap;
+}
+
+select,
+input,
+textarea,
+button {
+  font-size: 16px;
+}
+
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select,
+textarea,
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: #007AFF;
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.98);
+}
+
+#stats {
+  padding: 12px 16px 0;
+  color: #666;
+  font-size: .9rem;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px;
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #ddd;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.thumb:active {
+  transform: scale(.96);
+}
+
+#fab {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  font-size: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+
+dialog {
+  width: min(92vw, 520px);
+  max-height: 90vh;
+  border: none;
+  border-radius: 18px;
+  padding: 18px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,.45);
+}
+
+dialog h3 {
+  margin-top: 0;
+}
+
+#detailImg {
+  width: 100%;
+  height: auto;
+  max-height: 40vh;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #eee;
+  margin-bottom: 12px;
+}
+
+textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.actions button {
+  flex: 1;
+  min-width: 100px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 12px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #555;
+}
