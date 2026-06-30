@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1">
+  <title>PicTag</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h2>📷 PicTag</h2>
+
+  <input
+    id="search"
+    type="text"
+    placeholder="タグを検索">
+
+  <div class="topBar">
+
+    <select id="folderFilter">
+      <option value="all">📁 すべて</option>
+      <option value="未分類">📁 未分類</option>
+    </select>
+
+    <button id="newFolderBtn">
+      ＋フォルダ
+    </button>
+
+  </div>
+</header>
+
+<main>
+
+  <div id="stats"></div>
+
+  <div id="gallery"></div>
+
+</main>
+
+<button id="fab">＋</button>
+
+<!-- =========================
+     画像登録
+========================= -->
+
+<dialog id="uploadDialog">
+
+  <h3>画像登録</h3>
+
+  <input
+    type="file"
+    id="imageInput"
+    accept="image/*">
+
+  <br><br>
+
+  <label>フォルダ</label>
+
+  <select id="folderSelect">
+    <option value="未分類">未分類</option>
+  </select>
+
+  <br><br>
+
+  <input
+    type="text"
+    id="tagInput"
+    placeholder="タグを入力（スペース区切り）">
+
+  <div class="actions">
+
+    <button id="saveBtn">
+      保存
+    </button>
+
+    <button id="closeUpload">
+      閉じる
+    </button>
+
+  </div>
+
+</dialog>
+
+<!-- =========================
+     詳細画面
+========================= -->
+
+<dialog id="detailDialog">
+
+  <img id="detailImg">
+
+  <p id="createdAt"></p>
+
+  <label>フォルダ</label>
+
+  <select id="editFolder">
+    <option value="未分類">未分類</option>
+  </select>
+
+  <br><br>
+
+  <label>タグ</label>
+
+  <textarea id="editTags"></textarea>
+
+  <div class="actions">
+
+    <button id="updateBtn">
+      更新
+    </button>
+
+    <button id="downloadBtn">
+      保存
+    </button>
+
+    <button id="deleteBtn">
+      削除
+    </button>
+
+    <button id="closeDetail">
+      閉じる
+    </button>
+
+  </div>
+
+</dialog>
+
+<!-- =========================
+     フォルダ作成
+========================= -->
+
+<dialog id="folderDialog">
+
+  <h3>フォルダ作成</h3>
+
+  <input
+    type="text"
+    id="newFolderName"
+    placeholder="フォルダ名">
+
+  <div class="actions">
+
+    <button id="createFolderBtn">
+      作成
+    </button>
+
+    <button id="closeFolderDialog">
+      閉じる
+    </button>
+
+  </div>
+
+</dialog>
+
+<script src="script.js"></script>
+
+</body>
+</html>
